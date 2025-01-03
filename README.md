@@ -1,2 +1,0 @@
-# AWSProject
-# Naitik Desai
