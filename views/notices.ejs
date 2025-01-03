@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notices</title>
+    <!-- Add any CSS styling if needed -->
+</head>
+<body>
+    <h1>Notices</h1>
+    <% notices.forEach(notice => { %>
+        <div>
+            <h2><%= notice.title %></h2>
+            <p><%= notice.content %></p>
+            <a href="/admin/delete-notice/<%= notice._id %>">Delete</a>
+        </div>
+    <% }); %>
+    <a href="/admin/add-notice">Add Notice</a>
+</body>
+</html>

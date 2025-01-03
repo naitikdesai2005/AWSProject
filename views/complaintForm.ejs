@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form</title>
+</head> 
+<body>
+    <h1>Submit a Complaint</h1>
+    <!-- <form action="/student/complaints/<%= sessionId %>" method="post"> Add the session ID as a parameter -->
+    <form action="/student/complaints/<%= sessionId %>" method="post">
+        <label for="type">Type of Complaint:</label>
+        <select id="type" name="type" required>
+            <option value="estate">Estate</option>
+            <option value="food">Food</option>
+            <option value="cleaning">Cleaning</option>
+            <option value="misbehavior">Misbehavior</option>
+        </select>
+        <br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Students</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Student Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Room No</th>
+                <th>College ID</th>
+                <th>College Course</th>
+                <th>Year</th>
+                <th>Guardian Name</th>
+                <th>Guardian Phone</th>
+                <th>Guardian Email</th>
+                <th>Username</th>
+                <th>Password</th> <!-- Include password column -->
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% students.forEach(student => { %>
+                <tr>
+                    <td><%= student.fullName %></td>
+                    <td><%= student.email %></td>
+                    <td><%= student.phone %></td>
+                    <td><%= student.address %></td>
+                    <td><%= student.roomNo %></td>
+                    <td><%= student.collegeID %></td>
+                    <td><%= student.collegeCourse %></td>
+                    <td><%= student.year %></td>
+                    <td><%= student.guardianName %></td>
+                    <td><%= student.guardianPhone %></td>
+                    <td><%= student.guardianEmail %></td>
+                    <td><%= student.username %></td>
+                    <td><%= student.password %></td>
+                    <td><a href="/admin/students/update/<%= student._id %>">Update</a></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

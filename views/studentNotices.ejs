@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Notices</title>
+    <!-- Add any CSS styling if needed -->
+</head>
+<body>
+    <h1>Notices</h1>
+    <% if (notices.length > 0) { %>
+        <ul>
+            <% notices.forEach(notice => { %>
+                <li>
+                    <h2><%= notice.title %></h2>
+                    <p><%= notice.content %></p>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No notices available.</p>
+    <% } %>
+</body>
+</html>

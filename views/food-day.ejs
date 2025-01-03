@@ -1,0 +1,24 @@
+<!-- updateFoodItem.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Food Menu</title>
+</head>
+<body>
+    <h1>Update Food Menu</h1>
+    <form action="/admin/food-menu/update/<%= foodItem._id %>" method="POST">
+        <label for="day">Day:</label>
+        <input type="text" id="day" name="day" value="<%= foodItem.day %>" readonly><br>
+        <label for="breakfast">Breakfast:</label>
+        <input type="text" id="breakfast" name="breakfast" value="<%= foodItem.breakfast %>"><br>
+        <label for="lunch">Lunch:</label>
+        <input type="text" id="lunch" name="lunch" value="<%= foodItem.lunch %>"><br>
+        <label for="dinner">Dinner:</label>
+        <input type="text" id="dinner" name="dinner" value="<%= foodItem.dinner %>"><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
