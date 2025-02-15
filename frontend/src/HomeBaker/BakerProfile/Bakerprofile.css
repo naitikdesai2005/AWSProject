@@ -1,0 +1,147 @@
+.baker-profile-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #4a4a4a;
+  margin: 20px;
+}
+
+.profile-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.profile-pic img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 4px solid white;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+.profile-details {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 200px;
+}
+
+.edit-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.edit-container .input-group {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  flex: 1 1 calc(50% - 50px);
+}
+
+.edit-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.edit-container input,
+.edit-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-container button {
+  background-color: #f79c3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.edit-container button:hover {
+  background-color: #de8425;
+}
+
+.profile-details h2 {
+  margin-top: 0;
+  font-size: 35px;
+  color: #f79c3e;
+}
+
+.profile-details p {
+  margin: 5px 0;
+  margin-top: 25px;
+}
+
+.edit-button {
+  background-color: #f79c3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  width: 145px;
+}
+
+.upload-button {
+  background-color: #f79c3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 20px;
+  font-size: 16px;
+  width: 145px;
+}
+
+.upload-button:hover {
+  background-color: #de8425;
+}
+
+.profile-pic input[type="file"] {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .profile-pic img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .baker-profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-details {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .upload-button {
+    margin-left: 0;
+  }
+
+  .edit-container .input-group {
+    flex: 1 1 100%;
+  }
+}
